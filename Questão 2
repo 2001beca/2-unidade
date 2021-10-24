@@ -1,0 +1,17 @@
+#include <stdio.h>
+int adicionarnumeros(int valor, int n)
+{
+ if (valor < n - 1)
+ return valor + adicionarnumeros(++valor, n);
+ return 0;
+}
+int main()
+{
+ int numeros = 0;
+ int adicionar = 0;
+ printf("Qual a quantidade de números a ser adicionado ?\n");
+ scanf("%i", &numeros);
+ adicionar = adicionarnumeros(adicionar, numeros);
+ printf("A soma total é: %d\n", adicionar);
+ return 0;
+}
