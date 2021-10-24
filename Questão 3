@@ -1,0 +1,18 @@
+#include <stdio.h>
+int rsoma(int vetor[], int n)
+{
+if( n == 1 )
+{
+return vetor[n-1];
+}
+return vetor[n-1] + rsoma(vetor, n-1);
+}
+int main()
+{
+int vetor[6] = {90,50,15,30,70,10};
+int Soma;
+printf("\nAplicando a recursividade");
+Soma = rsoma(vetor,6);
+printf("\nSoma = %d\n\n", Soma);
+return 0;
+}
